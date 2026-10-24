@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getCharacterById, getAllCharacterIds } from '@/lib/rickandmorty';
+import { getCharacterById} from '@/lib/rickandmorty';
 
 interface CharacterPageProps {
   params: Promise<{
@@ -15,11 +15,6 @@ const statusColors: Record<string, string> = {
   Dead: 'bg-red-500',
   unknown: 'bg-gray-400',
 };
-
-export async function generateStaticParams() {
-  const ids = await getAllCharacterIds(40);
-  return ids.map((id) => ({ id }));
-}
 
 export async function generateMetadata({ params }: CharacterPageProps): Promise<Metadata> {
   const { id } = await params;
