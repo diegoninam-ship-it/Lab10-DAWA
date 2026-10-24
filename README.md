@@ -141,7 +141,7 @@ npm run build
 npm start
 ```
 
-**Producción:** [Lab10-DAWA en Vercel](#) <!-- reemplazar con el link real -->
+**Producción:** [Lab10-DAWA en Vercel](https://lab10-dawa-mu.vercel.app/) <!-- reemplazar con el link real -->
 
 ---
 
