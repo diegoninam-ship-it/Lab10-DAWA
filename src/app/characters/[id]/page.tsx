@@ -17,7 +17,7 @@ const statusColors: Record<string, string> = {
 };
 
 export async function generateStaticParams() {
-  const ids = await getAllCharacterIds(40); // antes: 100
+  const ids = await getAllCharacterIds(40);
   return ids.map((id) => ({ id }));
 }
 
